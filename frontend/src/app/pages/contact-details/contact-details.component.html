@@ -1,0 +1,28 @@
+<section class="main-layout flex contact-details" *ngIf="contact">
+  <a routerLink="/contact" class="back-arrow">&larr;</a>
+  <div class="flex column align-center">
+    <img
+      [src]="'https://i.pravatar.cc/150?u=' + contact._id"
+      alt="contact"
+      class="contact-img"
+    />
+    <h3>{{ contact.name }}</h3>
+    <p>Email: {{ contact.email }}</p>
+    <p>Phone: {{ contact.phone }}</p>
+    <div class="flex space-between btn-container">
+      <a [routerLink]="['/edit', contact._id]" class="btn">Edit</a>
+      <button (click)="onRemoveContact()" class="btn">Remove Contact</button>
+    </div>
+  </div>
+  <div class="moves-container">
+    <transfer-fund
+      [contact]="contact"
+      (transferCoins)="onTransferCoins($event)"
+    ></transfer-fund>
+    <move-list
+      [title]="'Your Moves:'"
+      [moves]="getContactMoves()"
+      [isShowContact]="false"
+    ></move-list>
+  </div>
+</section>

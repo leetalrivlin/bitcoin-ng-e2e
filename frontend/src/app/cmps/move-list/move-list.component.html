@@ -1,0 +1,8 @@
+<section class="flex column align-center move-list" *ngIf="moves.length">
+  <h3>{{title}}</h3>
+  <hr />
+  <ul class="clean-list flex column">
+      <move-preview *ngFor="let move of moves; index as idx"
+      [trackBy]="index" [move]="move" [isShowContact]="isShowContact"></move-preview>
+  </ul>
+</section>

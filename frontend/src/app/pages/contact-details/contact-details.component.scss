@@ -1,0 +1,40 @@
+@import "../../../assets/scss/setup/variables";
+@import "../../../assets/scss/setup/mixins";
+
+.contact-details {
+  justify-content: flex-end;
+  margin-top: 30px;
+  color: whitesmoke;
+  .contact-img {
+    width: 250px;
+    border-radius: 50%;
+  }
+  .btn-container {
+    margin-top: 20px;
+    width: 250px;
+  }
+  .moves-container {
+    width: 50%;
+    margin-inline-start: 60px;
+  }
+}
+
+@include for-narrow-layout {
+  .contact-details {
+    flex-direction: column;
+    align-items: center;
+    .moves-container {
+      width: 70%;
+      margin-block-start: 20px;
+      margin-inline-start: 0;
+    }
+  }
+}
+
+@include for-mobile-layout {
+  .contact-details {
+    .moves-container {
+      width: 100%;
+    }
+  }
+}

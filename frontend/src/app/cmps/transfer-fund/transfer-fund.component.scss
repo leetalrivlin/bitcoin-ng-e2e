@@ -1,0 +1,18 @@
+.transfer-fund {
+  width: 100%;
+  padding: 20px;
+  background-color: #5F5F61;
+  border-radius: 10px;
+  h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  form {
+    > *:not(:first-child) {
+      margin-inline-start: 10px;
+    }
+    input {
+      height: 35px;
+    }
+  }
+}

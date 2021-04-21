@@ -1,0 +1,15 @@
+<li class="flex column move-preview">
+  <div class="flex justify-start move-info">
+  <img
+      [src]="'../../assets/icons/bitcoin-green.png'"
+      alt="coins"
+      class="coins-icon"
+    />
+  <p *ngIf="isShowContact">To: {{move.to}}</p>
+  <p>At: {{getMoveDate()}}</p>
+  <p class="flex align-center">
+    <span>Amount: {{move.amount}}</span>
+  </p>
+  </div>
+  <hr/>
+</li>

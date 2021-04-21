@@ -1,0 +1,31 @@
+<section *ngIf="user" class="flex space-between main-layout home-page">
+  <div class="home-page-content">
+    <div class="flex column align-center justify-center hello-container">
+      <h2>Hello {{user.name}}!</h2>
+      <p class="flex align-center">
+        <img
+          [src]="'../../assets/icons/bitcoin-green.png'"
+          alt="coins"
+          class="coins-icon"
+        />
+        <span>Coins: {{user.coins}}</span>
+      </p>
+      <p class="flex align-center">
+        <img
+          [src]="'../../assets/icons/coins.png'"
+          alt="coins"
+          class="coins-icon"
+        />
+        <span>BTC: {{rate}}</span>
+      </p>
+      <a routerLink="/contact" class="btn btn-cta">Try It Now</a>
+    </div>
+
+      <move-list
+        [moves]="getContactMoves()"
+        [title]="'Your last 3 moves:'"
+        [isShowContact]="true"
+      ></move-list>
+  </div>
+  <img src="../../../assets/imgs/login.png" alt="home-img" class="home-img">
+</section>

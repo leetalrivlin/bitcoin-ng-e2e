@@ -1,0 +1,34 @@
+@import "../../../assets/scss/setup/variables";
+@import "../../../assets/scss/setup/mixins";
+
+.contact-edit {
+  color: whitesmoke;
+  h1 {
+    text-align: center;
+  }
+  form {
+    width: 40%;
+    margin: auto;
+    > * {
+      margin-block-end: 20px;
+    }
+  }
+}
+
+@include for-narrow-layout {
+  .contact-edit {
+    form {
+      width: 70%;
+    }
+  }
+}
+
+@include for-mobile-layout {
+  .contact-edit {
+    form {
+      width: 100%;
+    }
+  }
+}
+
+

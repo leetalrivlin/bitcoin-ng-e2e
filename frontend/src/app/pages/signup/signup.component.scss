@@ -1,0 +1,52 @@
+@import "../../../assets/scss/setup/variables";
+@import "../../../assets/scss/setup/mixins";
+
+.signup-container {
+  form {
+    width: 50%;
+    background-color: #5a5a5a4a;
+    color: whitesmoke;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 1;
+    > * {
+      margin-block-end: 20px;
+    }
+    input {
+      flex: 1;
+      height: 35px;
+      border: 1px solid grey;
+      margin-inline-end: 10px;
+      // background-color: whitesmoke;
+      // color: rgb(1, 7, 17);
+    }
+  }
+  .signup-img {
+    width: 300px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@include for-medium-layout {
+  .signup-container {
+    form {
+      width: 70%;
+    }
+  }
+}
+
+@include for-mobile-layout {
+  .signup-container {
+    form {
+      width: 100%;
+    }
+    .signup-img {
+      position: static;
+      bottom: unset;
+      right: unset;
+      margin-top: 50px;
+    }
+  }
+}

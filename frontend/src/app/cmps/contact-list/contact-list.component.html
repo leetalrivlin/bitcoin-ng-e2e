@@ -1,0 +1,17 @@
+<div class="contact-list">
+  <a *ngFor="let contact of contacts; index as idx"
+  [trackBy]="trackByFn"
+  [routerLink]="['/contact',contact._id]"
+  >
+  <contact-preview [contact]="contact"></contact-preview>
+</a>
+
+  <a [routerLink]="['/edit']"
+    ><img
+      src="../../assets/icons/plus-black.png"
+      alt="Add contact"
+      title="Add contact"
+      class="plus-icon"
+  /></a>
+
+</div>

@@ -1,0 +1,15 @@
+<section class="transfer-fund">
+  <h3>Transfer coins to {{contact.name}}:</h3>
+  <form class="flex justify-center align-center" (submit)="onTransferCoins($event)">
+    <label for="amount">Amount:</label>
+    <input
+      required
+      type="number"
+      id="amount"
+      [(ngModel)]="amount"
+      name="amount"
+      class="transfer-input"
+    />
+    <button class="btn">Transfer</button>
+  </form>
+</section>

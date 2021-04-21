@@ -1,0 +1,17 @@
+<section class="flex column align-center main-layout signup-container">
+  <form (submit)="onSaveUser()">
+    <h3>Please enter your name:</h3>
+    <div class="flex align-center space-between">
+      <input
+        required
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter your name"
+        [(ngModel)]="userName"
+      />
+      <button class="btn">Signup</button>
+    </div>
+  </form>
+  <img [src]="'../../../assets/imgs/gold-coin.png'" alt="coin" class="signup-img"/>
+</section>

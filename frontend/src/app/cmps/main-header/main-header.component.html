@@ -1,0 +1,11 @@
+<div class="flex space-between align-center header-layout main-header">
+  <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="logo">Bitcoin Wallet</a>
+  <div *ngIf="isMenuOpen" class="full-screen" [ngClass]="{ 'show-screen': isMenuOpen }" (click)="isMenuOpen = false"></div>
+  <nav class="flex" [ngClass]="{ 'menu-open': isMenuOpen }">
+    <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+    <a routerLink="contact" routerLinkActive="active">Contacts</a>
+    <a routerLink="statistic" routerLinkActive="active">Statistics</a>
+    <a routerLink="signup" routerLinkActive="active">Signup</a>
+  </nav>
+  <button class="menu-btn" (click)="isMenuOpen = true">&#9776;</button>
+</div>

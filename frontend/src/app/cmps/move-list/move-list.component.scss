@@ -1,0 +1,24 @@
+@import '../../../assets/scss/setup/variables';
+@import '../../../assets/scss/setup/mixins';
+
+.move-list {
+  width: 100%;
+  background-color: #c2c2c2;
+  color: rgb(1, 7, 17);
+  border-radius: 10px;
+  margin-block-start: 20px;
+  padding: 20px;
+  hr {
+    border-bottom: 1px dashed grey;
+    width: 70%;
+    margin: 8px 0 0 0;
+  }
+}
+
+@include for-narrow-layout {
+  .move-list {
+    ul {
+      align-items: center;
+    }
+  }
+}

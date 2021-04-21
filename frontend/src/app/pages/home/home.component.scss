@@ -1,0 +1,61 @@
+@import '../../../assets/scss/setup/variables';
+@import '../../../assets/scss/setup/mixins';
+
+.home-page {
+  height: 90vh;
+  .home-page-content {
+    margin: 0;
+    .hello-container {
+      background-color: #c2c2c2;
+      color: rgb(1, 7, 17);
+      text-align: left;
+      width: 100%;
+      margin: auto;
+      padding: 20px;
+      border-radius: 10px;
+      .coins-icon {
+        width: 20px;
+      }
+      span {
+        margin-inline-start: 10px;
+      }
+    }
+    .btn-cta {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+  .home-img {
+    width: 50%;
+    padding: 20px 0 20px 20px;
+  }
+}
+
+@include for-medium-layout {
+  .home-page {
+    flex-direction: column;
+    .hello-container {
+      .btn-cta {
+        width: 50%;
+      }
+    }
+    .home-img {
+      width: 400px;
+      padding: 20px;
+      align-self: flex-end;
+    }
+  }
+}
+
+@include for-narrow-layout {
+  .home-page {
+    .hello-container {
+      .btn-cta {
+        width: 100%;
+      }
+    }
+    .home-img {
+      width: 100%;
+    }
+  }
+}

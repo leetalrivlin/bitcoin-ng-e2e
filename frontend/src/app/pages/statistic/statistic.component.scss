@@ -1,0 +1,18 @@
+@import "../../../assets/scss/setup/variables";
+@import "../../../assets/scss/setup/mixins";
+
+.chart {
+  padding: 100px;
+}
+
+@include for-narrow-layout {
+  .chart {
+    padding: 50px;
+  }
+}
+
+@include for-mobile-layout {
+  .chart {
+    padding: 50px 0;
+  }
+}

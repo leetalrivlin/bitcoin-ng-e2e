@@ -1,0 +1,23 @@
+@import "../../../assets/scss/setup/variables";
+@import "../../../assets/scss/setup/mixins";
+
+.contact-filter {
+  width: 50%;
+  margin: auto;
+  label {
+    color: whitesmoke;
+  }
+  input {
+    height: 35px;
+  }
+  .search-btn {
+    margin-inline-start: 10px;
+    min-width: unset;
+  }
+}
+
+@include for-narrow-layout {
+  .contact-filter {
+    width: 100%;
+  }
+}
