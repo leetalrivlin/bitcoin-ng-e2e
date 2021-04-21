@@ -11,10 +11,10 @@ export class ContactService {
   constructor(private http: HttpClient) {}
 
 // local mode:
-BASE_URL = '//localhost:3030/api/contact/';
+// BASE_URL = '//localhost:3030/api/contact/';
 
 // production mode:
-  // BASE_URL = '/api/contact/';
+  BASE_URL = '/api/contact/';
 
   private _filterBy$ = new BehaviorSubject({ term: '' });
 
