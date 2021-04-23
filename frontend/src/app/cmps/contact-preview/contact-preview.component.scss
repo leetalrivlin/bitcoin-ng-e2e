@@ -5,8 +5,12 @@
   padding: 20px;
   border-radius: 12px;
   background-color: #5a5a5a4a;
+  border: 3px solid transparent;
   color: whitesmoke;
   cursor: pointer;
+  &:hover {
+    border-color: darkcyan;
+  }
   p {
     margin: 0 0 10px 0;
   }

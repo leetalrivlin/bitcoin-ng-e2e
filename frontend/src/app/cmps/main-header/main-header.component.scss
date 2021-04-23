@@ -48,10 +48,10 @@
       position: fixed;
       z-index: 10;
       height: 100%;
+      width: 30%;
       top: 0;
       right: 0;
       bottom: 0;
-      width: 30%;
       transform: translateX(100%);
       box-shadow: none;
 
@@ -78,6 +78,14 @@
         opacity: 1;
         visibility: visible;
       }
+    }
+  }
+}
+
+@include for-mobile-layout {
+  .main-header {
+    nav {
+      width: 50%;
     }
   }
 }
