@@ -1,20 +1,21 @@
-@import '../../../assets/scss/setup/variables';
-@import '../../../assets/scss/setup/mixins';
+@import "../../../assets/scss/setup/variables";
+@import "../../../assets/scss/setup/mixins";
 
 .home-page {
-  height: 90vh;
   .home-page-content {
+    flex: 1;
     margin: 0;
     .hello-container {
-      background-color: #c2c2c2;
-      color: rgb(1, 7, 17);
+      background-color: $clr3;
+      color: $clr1;
       text-align: left;
       width: 100%;
       margin: auto;
       padding: 20px;
       border-radius: 10px;
       .coins-icon {
-        width: 20px;
+        width: 25px;
+        height: 25px;
       }
       span {
         margin-inline-start: 10px;
@@ -26,22 +27,26 @@
     }
   }
   .home-img {
-    width: 50%;
+    width: 500px;
     padding: 20px 0 20px 20px;
+    object-fit: contain;
   }
 }
 
 @include for-medium-layout {
   .home-page {
     flex-direction: column;
-    .hello-container {
-      .btn-cta {
-        width: 50%;
+    .home-page-content {
+      width: 100%;
+      .hello-container {
+        .btn-cta {
+          width: 50%;
+        }
       }
     }
     .home-img {
       width: 400px;
-      padding: 20px;
+      padding: 20px 0 0 0;
       align-self: flex-end;
     }
   }
@@ -49,13 +54,16 @@
 
 @include for-narrow-layout {
   .home-page {
-    .hello-container {
-      .btn-cta {
-        width: 100%;
+    .home-page-content {
+      .hello-container {
+        .btn-cta {
+          width: 100%;
+        }
       }
     }
     .home-img {
       width: 100%;
+      align-self: unset;
     }
   }
 }

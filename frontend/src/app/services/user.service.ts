@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
+import { Contact } from '../models/contact';
 import { User } from '../models/user';
 import { StorageService } from './storage.service';
 
@@ -51,7 +52,6 @@ export class UserService {
     try {
       const user = await this.storageService.get(this.STORAGE_KEY, id);
       return user;
-      // return await this.gDefaultUsers[0];
     } catch (err) {
       console.log('cant get user', err);
     }
@@ -72,14 +72,13 @@ export class UserService {
     }
   }
 
-  public async addMove(contact, amount) {
+  public async addMove(contact: Contact, amount: number) {
     const move = {
       toId: contact._id,
       to: contact.name,
       at: Date.now(),
       amount,
     };
-    console.log('move', move);
     try {
       const loggedUser = await this.getLogedinUser();
       loggedUser.coins -= amount;

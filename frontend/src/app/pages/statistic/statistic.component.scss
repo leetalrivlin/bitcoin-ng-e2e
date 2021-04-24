@@ -2,12 +2,18 @@
 @import "../../../assets/scss/setup/mixins";
 
 .chart {
-  padding: 100px;
+  padding: 0 150px;
+}
+
+@include for-medium-layout {
+  .chart {
+    padding: 0 100px;
+  }
 }
 
 @include for-narrow-layout {
   .chart {
-    padding: 50px;
+    padding: 0 50px;
   }
 }
 

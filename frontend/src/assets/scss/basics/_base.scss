@@ -60,7 +60,7 @@ a.router-link-exact-active {
 }
 
 hr {
-  background-color: rgba(9, 30, 66, 0.13);
+  background-color: rgba(245, 245, 245, 0.301);
   border: 0;
   height: 1px;
   margin: 0;
@@ -87,4 +87,16 @@ input {
     border: none;
     background-color: rgb(45, 50, 59);
     color: white;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

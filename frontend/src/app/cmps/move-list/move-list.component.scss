@@ -3,13 +3,13 @@
 
 .move-list {
   width: 100%;
-  background-color: #c2c2c2;
-  color: rgb(1, 7, 17);
+  background-color: #f5f5f557;
+  color: $clr1;
   border-radius: 10px;
   margin-block-start: 20px;
   padding: 20px;
   hr {
-    border-bottom: 1px dashed grey;
+    border-bottom: 1px dashed $clr1;
     width: 70%;
     margin: 8px 0 0 0;
   }

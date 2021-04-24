@@ -1,13 +1,22 @@
 .header-layout {
-  padding: 0 15px;
+  padding: 0 25px;
   height: 50px;
 }
 
 .main-layout {
-  padding: 50px 15px 50px 15px;
+  padding: 40px 25px 40px 25px;
   flex: 1;
 }
 
 .main-content {
   flex: 1;
+}
+
+@include for-normal-layout {
+  .header-layout {
+    padding: 0 15px;
+  }
+  .main-layout {
+    padding: 40px 15px 40px 15px;
+  }
 }

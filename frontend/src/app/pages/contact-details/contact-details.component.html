@@ -1,5 +1,6 @@
-<section class="main-layout flex contact-details" *ngIf="contact">
+<section class="main-layout contact-details" *ngIf="contact">
   <a routerLink="/contact" class="back-arrow">&larr;</a>
+  <section class="flex justify-center main">
   <div class="flex column align-center">
     <img
       [src]="'https://i.pravatar.cc/150?u=' + contact._id"
@@ -11,7 +12,7 @@
     <p>Phone: {{ contact.phone }}</p>
     <div class="flex space-between btn-container">
       <a [routerLink]="['/edit', contact._id]" class="btn">Edit</a>
-      <button (click)="onRemoveContact()" class="btn">Remove Contact</button>
+      <button (click)="onRemoveContact()" class="btn">Delete Contact</button>
     </div>
   </div>
   <div class="moves-container">
@@ -25,4 +26,5 @@
       [isShowContact]="false"
     ></move-list>
   </div>
+</section>
 </section>

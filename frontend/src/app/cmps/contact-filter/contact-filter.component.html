@@ -1,5 +1,6 @@
 <form class="contact-filter">
   <label for="name">Search contact</label>
+  <div class="flex align-center">
   <input
     type="text"
     id="name"
@@ -7,5 +8,7 @@
     placeholder="Enter name"
     [(ngModel)]="filterBy.term"
     (ngModelChange)="onSetFilter()"
-  />
+    />
+    <img src="../../../assets/icons/search-grey.svg" alt="search">
+</div>
 </form>
